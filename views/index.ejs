@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+</head>
+<body>
+    <div class="wrapImg"><img src="../public/images/ChuckNorrisNew.jpg"/></div>
+
+
+ <header>
+    <h1>Chuck Norris Says </h1>
+
+   
+
+</header>
+    <main>
+        <div class="form">
+            <h2>Search by keyword</h2>
+            <form  action="/search" method="POST">
+                <input type="text" name="search" id="gfgcb">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+   
+
+    <% if (locals.fact) {%>
+     
+        <div class="citatesWrap"> 
+             <% for(let i=0; i<fact.length;i++) {%>
+       
+            <p class="citatDesc">Fact number <%= i+1 %> about Chuck Norris:</p>
+            <span class="citat"><%= fact[i].value %></span>
+
+<% } %>
+</div>
+    <% } %>
+
+</main>
+<footer><span>Site design / Taras © 2024  user contributions </span></footer>
+</body>
+</html>
